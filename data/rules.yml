@@ -1,0 +1,100 @@
+version: "3.1"
+
+rules:
+  - rule: Respond to sales comparison
+    steps:
+      - intent: ask_sales_comparison
+      - action: action_compare_sales
+
+  - rule: Respond to highest growth category
+    steps:
+      - intent: ask_highest_growth
+      - action: action_get_yoy_sales_growth
+      - action: action_get_highest_growth_categories
+
+  - rule: Respond to top SKUs
+    steps:
+      - intent: ask_top_skus
+      - action: action_get_top_skus_by_revenue
+
+  - rule: Respond to average sales per store
+    steps:
+      - intent: ask_avg_sales
+      - action: action_get_average_sales_per_store
+
+  - rule: Respond to price reduction simulation
+    steps:
+      - intent: simulation_price_reduction
+      - action: action_simulate_price_reduction
+
+  - rule: Respond to digital budget allocation simulation
+    steps:
+      - intent: simulation_budget_allocation
+      - action: action_simulate_digital_promotion_budget_increase
+
+  - rule: Respond to A/B test simulation
+    steps:
+      - intent: simulation_ab_test
+      - action: action_simulate_ab_test_discount_strategies
+
+  - rule: Respond to sales forecast simulation
+    steps:
+      - intent: simulation_sales_forecast
+      - action: action_predict_next_month_sales
+
+  - rule: Respond to removing a low-performing SKU
+    steps:
+      - intent: simulation_remove_sku
+      - action: action_simulate_removing_low_performing_sku
+
+  - rule: Respond to competitor product launch simulation
+    steps:
+      - intent: simulation_competitor_launch
+      - action: action_simulate_competitor_launch
+
+  - rule: Respond to supply disruption simulation
+    steps:
+      - intent: simulation_supply_disruption
+      - action: action_simulate_supply_chain_disruption
+
+  - rule: Respond to offline-to-e-commerce budget shift simulation
+    steps:
+      - intent: simulation_budget_shift
+      - action: action_simulate_offline_to_ecommerce_shift
+
+  - rule: Respond to increasing trade margins simulation
+    steps:
+      - intent: simulation_trade_margin
+      - action: action_simulate_increase_trade_margins
+
+  - rule: Respond to new competitor entering market
+    steps:
+      - intent: simulation_new_competitor
+      - action: action_simulate_new_competitor
+
+  - rule: Respond to highest ROI promotion
+    steps:
+      - intent: ask_highest_roi
+      - action: action_get_roi_data_for_promotions
+      - action: action_identify_highest_roi_promotion
+
+  - rule: Respond to incremental sales
+    steps:
+      - intent: ask_incremental_sales
+      - action: action_get_incremental_sales_by_promotion
+
+  - rule: Respond to highest retention promotion
+    steps:
+      - intent: ask_highest_retention
+      - action: action_get_retention_data_for_promotions
+      - action: action_identify_highest_retention_promotion
+
+  - rule: Respond to promotion cannibalization
+    steps:
+      - intent: ask_promotion_cannibalization
+      - action: action_calculate_promotion_cannibalization
+
+  - rule: Respond to Diwali campaign performance
+    steps:
+      - intent: ask_diwali_performance
+      - action: action_get_sales_data_for_campaign

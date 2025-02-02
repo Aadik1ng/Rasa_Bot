@@ -1,0 +1,114 @@
+version: "3.1"
+
+stories:
+  - story: Sales Comparison Story
+    steps:
+      - intent: scenario_sales_comparison
+      - action: action_compare_sales
+
+  - story: YoY Growth Story
+    steps:
+      - intent: scenario_yoy_growth
+      - action: action_get_yoy_sales_growth
+
+  - story: Top SKUs Story
+    steps:
+      - intent: scenario_top_skus
+      - action: action_get_top_skus_by_revenue
+
+  - story: Average Sales per Store Story
+    steps:
+      - intent: scenario_avg_sales
+      - action: action_avg_sales
+
+  - story: Compare Brands Story
+    steps:
+      - intent: scenario_compare_brands
+      - action: action_compare_brands
+
+  - story: Promotion Highest ROI Story
+    steps:
+      - intent: promo_highest_roi
+      - action: action_highest_roi
+
+  - story: Incremental Sales by Promotion Story
+    steps:
+      - intent: promo_incremental_sales
+      - action: action_incremental_sales
+
+  - story: Promotion Retention Story
+    steps:
+      - intent: promo_retention
+      - action: action_retention
+
+  - story: Promotion Cannibalization Story
+    steps:
+      - intent: promo_cannibalization
+      - action: action_cannibalization
+
+  - story: Campaign Sales Story
+    steps:
+      - intent: promo_campaign_sales
+      - action: action_campaign_sales
+
+  # Simulation Stories using implemented simulation actions
+
+  - story: Simulating price reduction impact
+    steps:
+      - intent: simulation_price_reduction
+      - action: action_simulate_price_reduction
+      - action: action_listen
+
+  - story: Simulating digital promotion budget allocation
+    steps:
+      - intent: simulation_budget_allocation
+      - action: action_simulate_digital_promotion_budget_increase
+      - action: action_listen
+
+  - story: Running an A/B test for discount strategies
+    steps:
+      - intent: simulation_ab_test
+      - action: action_simulate_ab_test_discount_strategies
+      - action: action_listen
+
+  - story: Forecasting sales for next month
+    steps:
+      - intent: simulation_sales_forecast
+      - action: action_predict_next_month_sales
+      - action: action_listen
+
+  - story: Simulating removal of a low-performing SKU
+    steps:
+      - intent: simulation_remove_sku
+      - action: action_simulate_removing_low_performing_sku
+      - action: action_listen
+
+  - story: Competitor product launch simulation
+    steps:
+      - intent: simulation_competitor_launch
+      - action: action_simulate_competitor_launch
+      - action: action_listen
+
+  - story: Simulating supply chain disruption
+    steps:
+      - intent: simulation_supply_disruption
+      - action: action_simulate_supply_chain_disruption
+      - action: action_listen
+
+  - story: Simulating a shift to digital promotions
+    steps:
+      - intent: simulation_budget_shift
+      - action: action_simulate_offline_to_ecommerce_shift
+      - action: action_listen
+
+  - story: Simulating trade margin increase
+    steps:
+      - intent: simulation_trade_margin
+      - action: action_simulate_increase_trade_margins
+      - action: action_listen
+
+  - story: Simulating new competitor impact
+    steps:
+      - intent: simulation_new_competitor
+      - action: action_simulate_new_competitor
+      - action: action_listen

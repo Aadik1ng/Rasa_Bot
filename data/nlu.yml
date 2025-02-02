@@ -1,0 +1,240 @@
+version: "3.1"
+
+nlu:
+
+  - intent: scenario_sales_comparison
+    examples: |
+      - How did our total sales in Q4 compare to the previous quarter?
+      - Compare sales for Q4 and Q3.
+      - What's the sales comparison between last quarter and the previous one?
+
+  - intent: scenario_yoy_growth
+    examples: |
+      - Which product categories saw the highest growth in sales YoY?
+      - Show me the categories with the highest year-over-year sales growth.
+      - What are the top growth categories this year compared to last?
+
+  - intent: scenario_top_skus
+    examples: |
+      - Show me the top 5 SKUs contributing to 80% of our revenue.
+      - Which SKUs are our biggest revenue drivers?
+      - List the top SKUs responsible for most of our revenue.
+
+  - intent: scenario_avg_sales
+    examples: |
+      - What is the average sales per store for our top-performing products?
+      - Tell me the average sales across stores for our best products.
+      - How do our top products perform on average per store?
+
+  - intent: scenario_compare_brands
+    examples: |
+      - Compare sales performance of Brand A vs. Brand B in the South region.
+      - How do Brand A and Brand B compare in the South region?
+      - What is the sales comparison between Brand A and Brand B in the South?
+
+  - intent: promo_highest_roi
+    examples: |
+      - Which promotional scheme generated the highest ROI last quarter?
+      - Identify the promotion with the best ROI from last quarter.
+      - What promotion yielded the highest return on investment recently?
+
+  - intent: promo_incremental_sales
+    examples: |
+      - Show me a breakdown of incremental sales driven by discounts vs. bundling offers.
+      - How do discounts compare to bundling in terms of incremental sales?
+      - Provide incremental sales data for discounts and bundling.
+
+  - intent: promo_retention
+    examples: |
+      - Which promotions led to the highest customer retention?
+      - Identify the promotions with the best retention rates.
+      - What promotional schemes resulted in the highest customer retention?
+
+  - intent: promo_cannibalization
+    examples: |
+      - What percentage of our promotions led to cannibalization of other SKUs?
+      - How much did promotions cannibalize sales of other products?
+      - Tell me the cannibalization percentage from our promotions.
+
+  - intent: promo_campaign_sales
+    examples: |
+      - How did our sales perform before, during, and after the last Diwali campaign?
+      - Show me sales data for the period around the Diwali campaign.
+      - What were the sales trends around the recent Diwali campaign?
+
+  - intent: simulation_price_reduction
+    examples: |
+      - Simulate a scenario where we reduce the price of Product X by 10%—how does it impact revenue?
+      - What happens if we lower Product X's price by 10%?
+      - Predict the revenue impact of a 10% price cut on Product X.
+
+  - intent: simulation_budget_allocation
+    examples: |
+      - If we allocate 20% more budget to digital promotions, what is the expected lift in sales?
+      - How will increased digital promotion budget affect sales?
+      - Simulate a 20% increase in digital promotion spending.
+
+  - intent: simulation_ab_test
+    examples: |
+      - Simulate an A/B test for two discount strategies: Flat 10% off vs. Buy 1 Get 1—what is the projected sales impact?
+      - Compare a 10% discount to a BOGO offer in an A/B test.
+      - What would be the sales impact of a flat discount versus a BOGO deal?
+
+  - intent: simulation_sales_forecast
+    examples: |
+      - Predict next month’s sales for our best-selling SKU using past 12 months' trends.
+      - Forecast next month's sales for the top SKU.
+      - What is the sales forecast for our best-selling product next month?
+
+  - intent: simulation_remove_sku
+    examples: |
+      - How will removing a low-performing SKU affect total category sales?
+      - Simulate the impact of discontinuing a low-performing SKU.
+      - What happens to category sales if we remove a low seller?
+
+  - intent: simulation_competitor_launch
+    examples: |
+      - If a key competitor launches a similar product with a 15% lower price, how will it impact our sales?
+      - Simulate the impact of a competitor offering a 15% lower price.
+      - How does a competitor's lower pricing affect our sales?
+
+  - intent: simulation_supply_disruption
+    examples: |
+      - Simulate the impact of a 30-day supply chain disruption on stock levels and revenue.
+      - What is the effect of a month-long supply chain disruption?
+      - Predict the outcome of a 30-day disruption in our supply chain.
+
+  - intent: simulation_budget_shift
+    examples: |
+      - If we move 10% of our offline sales budget to e-commerce, how will it affect overall sales?
+      - Simulate shifting 10% of offline budget to online sales.
+      - What is the impact of reallocating offline budget to e-commerce?
+
+  - intent: simulation_trade_margin
+    examples: |
+      - What is the expected impact of increasing trade margins by 5% for our top distributors?
+      - How will a 5% increase in trade margins affect distributor sales?
+      - Predict the effect of higher trade margins for top distributors.
+
+  - intent: ask_avg_sales
+    examples: |
+      - What is the average sales per store?
+      - Can you tell me the average sales across our outlets?
+      - How do our stores perform on average?
+
+# - intent: simulation_price_reduction
+#     examples: |
+#       - Simulate a scenario where we reduce the price of Product X by 10%
+#       - What happens if we lower the price of [Product_X] by 10%?
+#       - Show me the revenue impact of a 10% price drop on [Product_X]
+
+  - intent: simulation_budget_allocation
+    examples: |
+      - What if we increase the digital marketing budget by 20%?
+      - Simulate an increase in advertising spend by 20%
+      - How will sales change if we allocate more budget to online ads?
+
+  - intent: simulation_ab_test
+    examples: |
+      - Run an A/B test comparing Flat 10% off vs. Buy 1 Get 1 free
+      - Compare two discount strategies: Flat 10% vs. BOGO
+      - What is the impact of different discounting strategies?
+
+  - intent: simulation_sales_forecast
+    examples: |
+      - Predict next month’s sales for our best-selling SKU
+      - Forecast the sales trend based on the last 12 months
+      - What are the expected sales for the next quarter?
+
+  - intent: simulation_remove_sku
+    examples: |
+      - Simulate removing a low-performing SKU from our catalog
+      - What happens if we stop selling [Product_Y]?
+      - How does removing a product affect total category sales?
+
+  - intent: simulation_competitor_launch
+    examples: |
+      - Predict how a competitor launching a similar product will affect our sales
+      - What if a competitor enters with a 15% lower price?
+      - Simulate the impact of a new rival in our market
+
+  - intent: simulation_supply_disruption
+    examples: |
+      - Simulate a 30-day supply chain disruption
+      - How will our revenue change if supply is delayed for a month?
+      - Predict stock levels if we face supply issues
+
+  - intent: simulation_budget_shift
+    examples: |
+      - What happens if we move 10% of our offline sales budget to e-commerce?
+      - Simulate shifting more budget from offline stores to online
+      - What is the expected impact of investing more in digital sales?
+
+  - intent: simulation_trade_margin
+    examples: |
+      - What if we increase trade margins by 5% for top distributors?
+      - Simulate the impact of increasing trade margins
+      - How will profits change if we improve margins for distributors?
+
+  - intent: simulation_new_competitor
+    examples: |
+      - Predict how a new market entrant will impact our sales
+      - What if a competitor enters our space?
+      - Simulate the effects of a new competitor entering the market
+
+  - intent: ask_diwali_performance
+    examples: |
+      - How did the Diwali campaign perform?
+      - Show me the performance of our Diwali campaign.
+      - What were the sales figures around Diwali?
+
+  - intent: ask_highest_growth
+    examples: |
+      - Which product category had the highest growth?
+      - Tell me the top growth category in sales.
+      - What category saw the most growth in sales?
+
+  - intent: ask_highest_retention
+    examples: |
+      - Which promotion resulted in the highest retention?
+      - What is our top retention promotion?
+      - Tell me about the promotion that kept most customers.
+
+  - intent: ask_highest_roi
+    examples: |
+      - Which promotion had the highest ROI?
+      - Tell me the promotion with the best ROI.
+      - What promotion gave us the highest return on investment?
+
+  - intent: ask_incremental_sales
+    examples: |
+      - What is the incremental sales breakdown?
+      - How much incremental sales did we get from our promotions?
+      - Show me the incremental sales data.
+
+  - intent: ask_promotion_cannibalization
+    examples: |
+      - What percentage of promotions led to cannibalization?
+      - Tell me the cannibalization rate of our promotions.
+      - How much did promotions cannibalize other SKUs?
+
+  - intent: ask_sales_comparison
+    examples: |
+      - Compare our sales between Q4 and Q3.
+      - How did sales perform in Q4 compared to Q3?
+      - What is the sales comparison between the last two quarters?
+
+  - intent: ask_top_skus
+    examples: |
+      - Which are our top SKUs?
+      - List the SKUs contributing most to our revenue.
+      - What are the leading SKUs in terms of sales?
+
+  - intent: simulation_new_competitor
+    examples: |
+      - Predict how a new competitor entering the market would affect our sales over the next six months.
+      - How does a new competitor impact our sales in the coming months?
+      - Forecast the sales impact of a new market entrant.
+
+
+  
