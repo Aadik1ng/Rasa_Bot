@@ -1,0 +1,125 @@
+version: "3.1"
+
+intents:
+  - scenario_sales_comparison
+  - scenario_yoy_growth
+  - scenario_top_skus
+  - scenario_avg_sales
+  - scenario_compare_brands
+  - promo_highest_roi
+  - promo_incremental_sales
+  - promo_retention
+  - promo_cannibalization
+  - promo_campaign_sales
+  - simulation_price_reduction
+  - simulation_budget_allocation
+  - simulation_ab_test
+  - simulation_sales_forecast
+  - simulation_remove_sku
+  - simulation_competitor_launch
+  - simulation_supply_disruption
+  - simulation_budget_shift
+  - simulation_trade_margin
+  - simulation_new_competitor
+  - ask_avg_sales
+  # - ask_brand_comparison
+  - ask_diwali_performance
+  - ask_highest_growth
+  - ask_highest_retention
+  - ask_highest_roi
+  - ask_incremental_sales
+  - ask_promotion_cannibalization
+  - ask_sales_comparison
+  - ask_top_skus
+
+entities:
+  - quarter
+  - region
+  - campaign_name
+
+slots:
+  quarter:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: quarter
+      - type: from_text
+  region:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: region
+      - type: from_text
+  campaign_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: campaign_name
+      - type: from_text
+
+responses:
+  utter_ask_followup:
+    - text: "Would you like to run another simulation or get more information?"
+  utter_simulation_not_available:
+    - text: "Sorry, this simulation is currently not available."   
+
+
+actions:
+  # Actions from rules.yml
+  - action_compare_sales
+  - action_get_yoy_sales_growth
+  - action_get_highest_growth_categories
+  - action_get_top_skus_by_revenue
+  - action_get_average_sales_per_store
+  - action_compare_brands_in_region
+  - action_get_roi_data_for_promotions
+  - action_identify_highest_roi_promotion
+  - action_get_incremental_sales_by_promotion
+  - action_get_retention_data_for_promotions
+  - action_identify_highest_retention_promotion
+  - action_calculate_promotion_cannibalization
+  - action_get_sales_data_for_campaign
+  
+  # Actions from stories.yml (ensure no duplicate names or merge functionality as needed)
+  - action_yoy_growth
+  - action_top_skus
+  - action_avg_sales
+  - action_compare_brands
+  - action_highest_roi
+  - action_incremental_sales
+  - action_retention
+  - action_cannibalization
+  - action_campaign_sales
+  - utter_simulation_not_available
+  - action_total_sales_comparison_q4
+  - action_highest_sales_growth_yoy
+  - action_top_skus_80_percent_revenue
+  - action_average_sales_per_store
+  - action_brand_comparison_sales_south
+  - action_highest_roi_promotion_qtr
+  - action_incremental_sales_breakdown
+  - action_highest_retention_promotion
+  - action_promotion_cannibalization
+  - action_diwali_campaign_performance
+  - action_ask_avg_sales
+  - action_ask_brand_comparison
+  - action_ask_diwali_performance
+  - action_ask_highest_growth
+  - action_ask_highest_retention
+  - action_ask_highest_roi
+  - action_ask_incremental_sales
+  - action_ask_promotion_cannibalization
+  - action_ask_sales_comparison
+  - action_ask_top_skus
+
+  # Simulation actions
+  - action_simulate_price_reduction
+  - action_simulate_digital_promotion_budget_increase
+  - action_simulate_ab_test_discount_strategies
+  - action_predict_next_month_sales
+  - action_simulate_removing_low_performing_sku
+  - action_simulate_competitor_launch
+  - action_simulate_supply_chain_disruption
+  - action_simulate_offline_to_ecommerce_shift
+  - action_simulate_increase_trade_margins
+  - action_simulate_new_competitor
